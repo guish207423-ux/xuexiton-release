@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.12",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.12.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.12.zip",
-  "file": "xuexiton-update-2026.10.12.zip",
-  "sha256": "ce0bac400e0e7fd84b7fe9596fb1f012fea967dce73e9beb2fb3e1b1c3a1f070",
-  "notes": "新增：控制台网页一键更新（发现新版本自动弹横幅，点按钮全自动升级）",
+  "version": "2026.10.13",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.13.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.13.zip",
+  "file": "xuexiton-update-2026.10.13.zip",
+  "sha256": "4092a0ab81f1f76ecae7d599bb3a3e316936cbc28a949dac3b537878855ddf86",
+  "notes": "修复：.bat 文件换行符改为 CRLF（Windows 双击不再闪退）",
   "released": "2026-10-11"
 }
