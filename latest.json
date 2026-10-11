@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.15",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.15.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.15.zip",
-  "file": "xuexiton-update-2026.10.15.zip",
-  "sha256": "4f2a8e1617ef1c671c5f0114c68d989bd6fe59075fcd679689313e5e869dd393",
-  "notes": "安装与启动体验重做：① 安装脚本带实时拷贝进度（大模型文件也有），Windows 自动补装 VC++ 运行库，Docker 镜像装机时自动导入，装完直接问「现在启动吗」一步到位；② 支持把安装.bat 拷到任意位置运行（自动扫描 U 盘找包）；③ 启动不再静默等待——模型加载等耗时段每 10 秒报进度；④ 检测到「从 U 盘直接启动服务」会警告引导（避免 U 盘持续写入、无法弹出）；⑤ 新增 onclick docker 子命令；⑥ 聚合题库与各项修复延续上版。",
-  "released": "2026-10-11"
+  "version": "2026.10.16",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.16.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.16.zip",
+  "file": "xuexiton-update-2026.10.16.zip",
+  "sha256": "59e03d4fced92f85cf3a41f213d8c5ee9a42bc9ebb7078df865e92304d5515a4",
+  "notes": "细节修复（第 3 轮）：① 安装脚本防手滑——放进已装目录/开发目录里运行会被拦截或强提醒（防覆盖程序文件）；② U 盘检测改按文件系统类型判断（更准确，不再误报固定盘）；③ 安装.bat 结束后释放 U 盘占用（现在能顺利安全弹出）+ 完成提示补充；④ 双击被 SmartScreen 拦截的处理办法已写入常见问题。",
+  "released": "2026-10-12"
 }
