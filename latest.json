@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.13",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.13.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.13.zip",
-  "file": "xuexiton-update-2026.10.13.zip",
-  "sha256": "4092a0ab81f1f76ecae7d599bb3a3e316936cbc28a949dac3b537878855ddf86",
-  "notes": "修复：.bat 文件换行符改为 CRLF（Windows 双击不再闪退）",
+  "version": "2026.10.14",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.14.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.14.zip",
+  "file": "xuexiton-update-2026.10.14.zip",
+  "sha256": "595878ecbe08ec4672e545b833ee91f93f3291e0bcc86d5959e8ebeb1e06c1df",
+  "notes": "四项修复：① Docker 自动导入（或从源码自动构建）② 模型路径自动定位（安装时锁定）③ 只需一个 onclick.bat：启动全部服务并自动打开控制面板 ④ 聚合题库 1036 题修复（含 Windows 版 tikuAdapter 与同步工具）",
   "released": "2026-10-11"
 }
