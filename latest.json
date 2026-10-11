@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.11",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.11.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.11.zip",
-  "file": "xuexiton-update-2026.10.11.zip",
-  "sha256": "98a28f91513c309ef794b9f21a26260c5fb5e7c18319c1a7e68ef93bba434f1c",
-  "notes": "首个版本：本地题库 + AI 答题 + 控制台",
+  "version": "2026.10.12",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.12.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.12.zip",
+  "file": "xuexiton-update-2026.10.12.zip",
+  "sha256": "ce0bac400e0e7fd84b7fe9596fb1f012fea967dce73e9beb2fb3e1b1c3a1f070",
+  "notes": "新增：控制台网页一键更新（发现新版本自动弹横幅，点按钮全自动升级）",
   "released": "2026-10-11"
 }
