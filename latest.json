@@ -1,0 +1,9 @@
+{
+  "version": "2026.10.11",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.11.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.11.zip",
+  "file": "xuexiton-update-2026.10.11.zip",
+  "sha256": "98a28f91513c309ef794b9f21a26260c5fb5e7c18319c1a7e68ef93bba434f1c",
+  "notes": "首个版本：本地题库 + AI 答题 + 控制台",
+  "released": "2026-10-11"
+}
