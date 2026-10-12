@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.17",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.17.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.17.zip",
-  "file": "xuexiton-update-2026.10.17.zip",
-  "sha256": "c552b8e009091741b4e9a4e5d1bd8f3b169dff8f75cb011bfc0d6eb4fd62a799",
-  "notes": "成熟度打磨版：就绪检测/help/配色/日志轮转/备份策略/CHANGELOG/README（重发验证）",
+  "version": "2026.10.18",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.18.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.18.zip",
+  "file": "xuexiton-update-2026.10.18.zip",
+  "sha256": "a62d468f86bbbfe845d81b32036fc3cef5c06552883fa8a4111949a20c3f2b75",
+  "notes": "遗漏检查修复：① Windows 刷课临时配置 config.docker.ini（含密码副本）纳入全部排除表（在线更新/打包/U盘/备份）且用完即删；② 控制台网页更新备份对齐『只留最近 2 份』；③ 使用说明补充 help 命令指引。",
   "released": "2026-10-12"
 }
