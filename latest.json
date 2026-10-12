@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.18",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.18.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.18.zip",
-  "file": "xuexiton-update-2026.10.18.zip",
-  "sha256": "a4e9dcc65760f14de1d761bd4a2469b7a17d7c77c927ad00c3a3164c14418984",
-  "notes": "补齐 config.ini 遗漏：备份通配符修正、通知设置真正传进运行配置、通知写入私有 config.ini",
+  "version": "2026.10.23",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.23.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.23.zip",
+  "file": "xuexiton-update-2026.10.23.zip",
+  "sha256": "537ddaa65e679f145f5e5b820e596ba90d641ab1b399a469d7d0df0e619d37d9",
+  "notes": "安装器加固：安装前自动停旧服务、拷贝重试+空间检查+分类报错；Windows check 自检补全",
   "released": "2026-10-12"
 }
