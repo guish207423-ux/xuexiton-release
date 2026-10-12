@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.13",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.13.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.13.zip",
-  "file": "xuexiton-update-2026.10.13.zip",
-  "sha256": "5ab719e9d28fda05f5f92dfb367966fac3cbb9ccd107b4582bdc7a201975f4b9",
-  "notes": "Windows 兼容性修复：bridge 监听 0.0.0.0、config url 加 ?use=local、panel 改用 Docker 网关 IP",
+  "version": "2026.10.14",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.14.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.14.zip",
+  "file": "xuexiton-update-2026.10.14.zip",
+  "sha256": "41aa17475ba6cf03a8613d319d74c090247990b71b83898ba5a320ac65a4cc19",
+  "notes": "Windows 脚本编码修复：所有 .ps1 加 UTF-8 BOM、.bat 加 BOM+CRLF，解决双击无反应或报错",
   "released": "2026-10-12"
 }
