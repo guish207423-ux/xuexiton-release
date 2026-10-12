@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.16",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.16.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.16.zip",
-  "file": "xuexiton-update-2026.10.16.zip",
-  "sha256": "59e03d4fced92f85cf3a41f213d8c5ee9a42bc9ebb7078df865e92304d5515a4",
-  "notes": "细节修复（第 3 轮）：① 安装脚本防手滑——放进已装目录/开发目录里运行会被拦截或强提醒（防覆盖程序文件）；② U 盘检测改按文件系统类型判断（更准确，不再误报固定盘）；③ 安装.bat 结束后释放 U 盘占用（现在能顺利安全弹出）+ 完成提示补充；④ 双击被 SmartScreen 拦截的处理办法已写入常见问题。",
+  "version": "2026.10.17",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.17.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.17.zip",
+  "file": "xuexiton-update-2026.10.17.zip",
+  "sha256": "c552b8e009091741b4e9a4e5d1bd8f3b169dff8f75cb011bfc0d6eb4fd62a799",
+  "notes": "成熟度打磨版：① 就绪检测升级——按各服务特征响应识别（防止别的程序占用端口时被误判已运行），占用时给出排查指引；② 新增 onclick help 命令帮助；③ Linux 终端配色（OK 绿/错误红/标题加粗，NO_COLOR 兼容，日志无色）；④ 服务日志自动轮转（超 10MB 保留 .old）；⑤ 更新备份自动只保留最近 2 份；⑥ 新增 CHANGELOG.md 版本历史；⑦ README 增加「60 秒上手」与在线一键更新说明；⑧ deploy 目录清理（开发残留归档）。",
   "released": "2026-10-12"
 }
