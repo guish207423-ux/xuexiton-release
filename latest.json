@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.15",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.15.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.15.zip",
-  "file": "xuexiton-update-2026.10.15.zip",
-  "sha256": "84627a8ffdae26ec86661feffa201009b91df63ea06519b4f1352c15fb29b31f",
-  "notes": "修正编码规范：.bat 无 BOM+CRLF、.ps1 带 BOM+CRLF；打包链路补漏 .ps1 BOM（在线更新.bat 用不了的根因）",
+  "version": "2026.10.16",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.16.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.16.zip",
+  "file": "xuexiton-update-2026.10.16.zip",
+  "sha256": "781d86e81bec73d2599fbb6f377671bda99ae5b4d2ac8c03b4b23434d645b062",
+  "notes": "在线更新零配置：内置默认更新源（旧机器无需 deploy.env 配置 UPDATE_FEED）",
   "released": "2026-10-12"
 }
