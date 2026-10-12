@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.21",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.21.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.21.zip",
-  "file": "xuexiton-update-2026.10.21.zip",
-  "sha256": "45bd602afbdf04b48c3572a83665fe0a26242ed64e2cc378b01fa16509be1f4f",
-  "notes": "题库自动扩充进控制台：题库页新增待处理题目面板——AI 补答带实时进度、一键采纳、分享包导出/导入（浏览器内完成），后台 API 同步支持。",
+  "version": "2026.10.22",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.22.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.22.zip",
+  "file": "xuexiton-update-2026.10.22.zip",
+  "sha256": "5774eb173428b4b12fd8602927ae3f6806e5c0d78b4ac3621506a6f62963ecda",
+  "notes": "建议管理补全：新增『丢弃建议』按钮/命令（待处理题保留可重补）；离开题库页自动停止轮询；AI 未启动时给出明确指引；README 补控制台用法。",
   "released": "2026-10-12"
 }
