@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.20",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.20.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.20.zip",
-  "file": "xuexiton-update-2026.10.20.zip",
-  "sha256": "f1b820cd1cdcc58912fd1456fc39a781cad897262235efa28fbf49e35c17688a",
-  "notes": "新增题库自动扩充引擎：未命中题自动归集统计（按频次排序）、本地 AI 批量补答（存建议区不污染题库）、一键采纳入库、分享包导出/导入（自动去重合并）、待处理表去重——全流程实测通过。",
+  "version": "2026.10.21",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.21.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.21.zip",
+  "file": "xuexiton-update-2026.10.21.zip",
+  "sha256": "45bd602afbdf04b48c3572a83665fe0a26242ed64e2cc378b01fa16509be1f4f",
+  "notes": "题库自动扩充进控制台：题库页新增待处理题目面板——AI 补答带实时进度、一键采纳、分享包导出/导入（浏览器内完成），后台 API 同步支持。",
   "released": "2026-10-12"
 }
