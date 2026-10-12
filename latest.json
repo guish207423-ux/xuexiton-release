@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.16",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.16.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.16.zip",
-  "file": "xuexiton-update-2026.10.16.zip",
-  "sha256": "781d86e81bec73d2599fbb6f377671bda99ae5b4d2ac8c03b4b23434d645b062",
-  "notes": "在线更新零配置：内置默认更新源（旧机器无需 deploy.env 配置 UPDATE_FEED）",
+  "version": "2026.10.17",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.17.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.17.zip",
+  "file": "xuexiton-update-2026.10.17.zip",
+  "sha256": "cb105836160f613dcee901c43b6c0a439348ec8702572a46bce76d91611ac91f",
+  "notes": "修复拉取课程失败（config.ini 问题）：新增随包分发的 config.template.ini，config.ini 退化为可选私有覆盖",
   "released": "2026-10-12"
 }
