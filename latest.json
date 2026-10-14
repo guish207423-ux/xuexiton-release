@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.23",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.23.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.23.zip",
-  "file": "xuexiton-update-2026.10.23.zip",
-  "sha256": "537ddaa65e679f145f5e5b820e596ba90d641ab1b399a469d7d0df0e619d37d9",
-  "notes": "安装器加固：安装前自动停旧服务、拷贝重试+空间检查+分类报错；Windows check 自检补全",
-  "released": "2026-10-12"
+  "version": "2026.10.24",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.24.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.24.zip",
+  "file": "xuexiton-update-2026.10.24.zip",
+  "sha256": "4ccf8dab6bbaad5ad79eae03f86b91f959ff0ac82b7166408b0d7f7d72a432d3",
+  "notes": "修复 Windows：①onclick.ps1 的 WaitOk 逗号参数（PowerShell 当数组→绑定失败→题库起不来）；②含中文的 .bat 加 ASCII 引导块（cmd 按系统代码页解码导致行被截断、残句当命令执行）；新增打包闸门 check-win-encoding.sh",
+  "released": "2026-10-14"
 }
