@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.25",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.25.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.25.zip",
-  "file": "xuexiton-update-2026.10.25.zip",
-  "sha256": "02b9bdf0c117cdeccda6ce22f69fa20a326c29bd898f757af5b348dbd01f045f",
-  "notes": "三处修复：①Windows onclick.ps1 的 WaitOk 逗号参数（PowerShell 当数组→题库起不来）；②含中文 .bat 加 ASCII 引导块（cmd 按系统代码页解码→行被截断、残句当命令执行）；③pid 文件按安装路径加指纹+stop 归属校验（同机两份安装不再互相误杀）。新增打包闸门 check-win-encoding.sh 与回归测试 regression-multi-install.sh",
+  "version": "2026.10.26",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.26.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.26.zip",
+  "file": "xuexiton-update-2026.10.26.zip",
+  "sha256": "abb1bdb58c4cf922859b2c43919fe1a2be946c57757ca6544f6d3fbb4ec425aa",
+  "notes": "修复「控制台更新页报未配置在线更新地址」。根因：更新源有三条读取路径，默认值只加在命令行侧（update.sh / 在线更新.ps1），控制台 panel.py 没配就报错，而安装器生成的 deploy.env 里又不写 UPDATE_FEED —— 于是 U 盘装出来的机器更新页一律不可用。本次三处默认对齐：panel.py 加内置 DEFAULT_UPDATE_FEED、deploy.env.example 的 UPDATE_FEED 由注释改为生效行、安装器（gen-env.ps1/安装.sh）生成 deploy.env 时显式写入。老机器把新版 deploy.env.example 覆盖过去即可恢复更新。",
   "released": "2026-10-14"
 }
