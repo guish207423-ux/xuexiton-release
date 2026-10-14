@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.24",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.24.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.24.zip",
-  "file": "xuexiton-update-2026.10.24.zip",
-  "sha256": "4ccf8dab6bbaad5ad79eae03f86b91f959ff0ac82b7166408b0d7f7d72a432d3",
-  "notes": "修复 Windows：①onclick.ps1 的 WaitOk 逗号参数（PowerShell 当数组→绑定失败→题库起不来）；②含中文的 .bat 加 ASCII 引导块（cmd 按系统代码页解码导致行被截断、残句当命令执行）；新增打包闸门 check-win-encoding.sh",
+  "version": "2026.10.25",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.25.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.25.zip",
+  "file": "xuexiton-update-2026.10.25.zip",
+  "sha256": "02b9bdf0c117cdeccda6ce22f69fa20a326c29bd898f757af5b348dbd01f045f",
+  "notes": "三处修复：①Windows onclick.ps1 的 WaitOk 逗号参数（PowerShell 当数组→题库起不来）；②含中文 .bat 加 ASCII 引导块（cmd 按系统代码页解码→行被截断、残句当命令执行）；③pid 文件按安装路径加指纹+stop 归属校验（同机两份安装不再互相误杀）。新增打包闸门 check-win-encoding.sh 与回归测试 regression-multi-install.sh",
   "released": "2026-10-14"
 }
