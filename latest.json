@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.33",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.33.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.33.zip",
-  "file": "xuexiton-update-2026.10.33.zip",
-  "sha256": "5c9cdc8855f454e8e8e13dbcb4b197e375751c607fb286401bddb7a1bab356ba",
-  "notes": "更新器两项加固：\n1) jsdelivr 在仓库每次推送后约 2 分钟内会短暂不可用（CDN 重建窗口，报 SSL UNEXPECTED_EOF_WHILE_READING），期间所有用户的「检查更新」失败。现在检查清单与下载更新包都增加了 raw.githubusercontent 兜底地址（仅对内置默认更新源生效，自定义 UPDATE_FEED 不受影响）。\n2) 更新器以前从不删除被新版本替换掉的文件，每次发版旧的前端构建产物都在 console-dist/assets 里堆积。现在更新后会自动清理该目录中新版本不再包含的旧产物。\n\n承接 2026.10.32：修复「一键拉取课程」三处缺陷（引擎就绪误报导致 Docker 回退被挡、前端仍读已废弃的 docker 字段导致首页恒显 DOCKER 不可用、Docker 分支三处无限自递归）。",
+  "version": "2026.10.34",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.34.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.34.zip",
+  "file": "xuexiton-update-2026.10.34.zip",
+  "sha256": "4a0c991bb5f06d0418b7d10f9f845d66a10a0044bc76dbc563223637522594f0",
+  "notes": "在线更新彻底修好：发布后 jsdelivr 会在缓存刷新前继续返回旧版本清单（HTTP 200 + 过期版本，不报错），旧版面板因此把「明明有新版本」误报成「已是最新」，这正是大家反馈更新没反应的原因。\n现在检查更新会同时查询 CDN 与 raw.githubusercontent 并取版本号更高的那个，单个源失败或过期都不再影响判断；更新包下载同样有备用地址。\n\n承接 2026.10.33：更新时自动清理 console-dist/assets 里被新版本替换掉的旧构建产物。",
   "released": "2026-10-16"
 }
