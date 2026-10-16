@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.32",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.32.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.32.zip",
-  "file": "xuexiton-update-2026.10.32.zip",
-  "sha256": "b293f4a25c7dcde4b406baaf827135581275d6db782566a46d08c191a8d6b436",
-  "notes": "修复「一键拉取课程」在 Linux 上必然失败（提示 docker 未部署 / DOCKER 不可用）。根因是三个缺陷叠加：①panel.py 的 engine_ready() 只检查「引擎源码存在 + 有 python」（pycmd() 最后 fallback 到 sys.executable，恒为真），从不真跑一次引擎，于是长期谎报「引擎正常·原生」，把 Docker 回退彻底挡住；②引擎依赖只随包发了 Windows 轮子 chaoxing/_vendor，Linux 版 _vendor_linux 从未随包发，原生引擎在 Linux 上一 import 就 ModuleNotFoundError: openai，每次点按钮都是秒崩；③Docker 分支里 engine_status/engine_logs/engine_exit_code 三个函数误写成 return 自己()，一旦真的回退到 Docker 就无限递归，/api/state 线程直接爆掉、HTTP 挂起（表现为连接建立后无响应直到超时）。另修一处前端假警报：控制台首页仍读 store.state.docker，而 /api/state 早已把该字段改名为 engine，导致「DOCKER 不可用」红字永久常亮——用户机器的 Docker 其实完全正常。修复：engine_ready() 改为真探测（实跑 main.py -h，returncode==0 才算就绪，探测结果缓存），三处自递归改回 ps_names_status()/container_logs()/exit_code()，前端改读 engine 并显示「引擎 正常·原生 / 正常·docker / 未就绪」。配套：安装器新增 Docker 引擎自动安装（pacman/apt/dnf/zypper 四分支 + 无 systemd 时后台直起 dockerd 并轮询就绪），并修正 -y 全自动模式下会静默跳过 Docker 安装的守卫缺陷；补发此前漏发、panel.py 硬依赖的 _engine_run.py。",
+  "version": "2026.10.33",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.33.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.33.zip",
+  "file": "xuexiton-update-2026.10.33.zip",
+  "sha256": "5c9cdc8855f454e8e8e13dbcb4b197e375751c607fb286401bddb7a1bab356ba",
+  "notes": "更新器两项加固：\n1) jsdelivr 在仓库每次推送后约 2 分钟内会短暂不可用（CDN 重建窗口，报 SSL UNEXPECTED_EOF_WHILE_READING），期间所有用户的「检查更新」失败。现在检查清单与下载更新包都增加了 raw.githubusercontent 兜底地址（仅对内置默认更新源生效，自定义 UPDATE_FEED 不受影响）。\n2) 更新器以前从不删除被新版本替换掉的文件，每次发版旧的前端构建产物都在 console-dist/assets 里堆积。现在更新后会自动清理该目录中新版本不再包含的旧产物。\n\n承接 2026.10.32：修复「一键拉取课程」三处缺陷（引擎就绪误报导致 Docker 回退被挡、前端仍读已废弃的 docker 字段导致首页恒显 DOCKER 不可用、Docker 分支三处无限自递归）。",
   "released": "2026-10-16"
 }
