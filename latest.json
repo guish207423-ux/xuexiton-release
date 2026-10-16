@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.34",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.34.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.34.zip",
-  "file": "xuexiton-update-2026.10.34.zip",
-  "sha256": "4a0c991bb5f06d0418b7d10f9f845d66a10a0044bc76dbc563223637522594f0",
-  "notes": "在线更新彻底修好：发布后 jsdelivr 会在缓存刷新前继续返回旧版本清单（HTTP 200 + 过期版本，不报错），旧版面板因此把「明明有新版本」误报成「已是最新」，这正是大家反馈更新没反应的原因。\n现在检查更新会同时查询 CDN 与 raw.githubusercontent 并取版本号更高的那个，单个源失败或过期都不再影响判断；更新包下载同样有备用地址。\n\n承接 2026.10.33：更新时自动清理 console-dist/assets 里被新版本替换掉的旧构建产物。",
+  "version": "2026.10.35",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.35.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.35.zip",
+  "file": "xuexiton-update-2026.10.35.zip",
+  "sha256": "9d8bbce850ad291576625cac126ae337e60b4ea1c7dca05be02064d4d0ec7223",
+  "notes": "在线更新链路补齐（上一版只修了控制台，这次把命令行侧一并修好）：\n1) update.sh（Linux）与 在线更新.ps1（Windows）此前用「版本号字符串相等」判断是否最新，只要版本源返回不同字符串就会继续更新 —— 版本源被 CDN 旧缓存拖住时，已在新版的机器会被降级安装。现在按数字段比较并明确拒绝更低版本。\n2) 两个命令行更新器此前只查一个 CDN 源，现在与控制台一致：双源取高 + 更新包备用直链。\n3) 修正更新时误跳过 chaoxing/api/cookies.py 引擎源码（原排除规则按 cookies 前缀笼统匹配，把引擎文件当成登录 cookie 排除了，更新后引擎文件不会更新）。\n4) 同步 U 盘发版源遗漏的三个文件：应用更新.bat / 更新.bat（修 Windows 下 robocopy 用法错误 16 导致更新失败）、README-一键部署.md（文档与当前控制台用法对齐）。",
   "released": "2026-10-16"
 }
