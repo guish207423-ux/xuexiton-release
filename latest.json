@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.35",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.35.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.35.zip",
-  "file": "xuexiton-update-2026.10.35.zip",
-  "sha256": "9d8bbce850ad291576625cac126ae337e60b4ea1c7dca05be02064d4d0ec7223",
-  "notes": "在线更新链路补齐（上一版只修了控制台，这次把命令行侧一并修好）：\n1) update.sh（Linux）与 在线更新.ps1（Windows）此前用「版本号字符串相等」判断是否最新，只要版本源返回不同字符串就会继续更新 —— 版本源被 CDN 旧缓存拖住时，已在新版的机器会被降级安装。现在按数字段比较并明确拒绝更低版本。\n2) 两个命令行更新器此前只查一个 CDN 源，现在与控制台一致：双源取高 + 更新包备用直链。\n3) 修正更新时误跳过 chaoxing/api/cookies.py 引擎源码（原排除规则按 cookies 前缀笼统匹配，把引擎文件当成登录 cookie 排除了，更新后引擎文件不会更新）。\n4) 同步 U 盘发版源遗漏的三个文件：应用更新.bat / 更新.bat（修 Windows 下 robocopy 用法错误 16 导致更新失败）、README-一键部署.md（文档与当前控制台用法对齐）。",
+  "version": "2026.10.36",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.36.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.36.zip",
+  "file": "xuexiton-update-2026.10.36.zip",
+  "sha256": "f309ac802c59a08bad2b94a15f9e48ea62d91c565f9f79ce4f397496dc704942",
+  "notes": "命令行刷课（./onclick.sh run / check）修复：\n1) 引擎相关函数按 $HERE 定位包内 chaoxing/，但脚本从未定义 HERE —— 而脚本开着 set -u，一走到引擎判断就 HERE: unbound variable 整个命令退出，命令行刷课一直是坏的。\n2) 引擎就绪判断改为真探活（跑一次 main.py -h 验完整条 import 链）：此前只看文件存在，在 Linux 上必然误判为「原生就绪（无需 Docker）」，实际依赖缺失、一启动就 ModuleNotFoundError，还把 Docker 回退挡在门外。\n3) run() 原来把「需要 Docker」的检查放在最前面，导致注释里承诺的「原生优先、无需 Docker」在没装 Docker 的机器上根本走不到 —— 现在先判原生引擎，只有走 Docker 回退才要求装 Docker。\n4) 引擎依赖路径按平台选择：Windows 用 chaoxing/_vendor，其它平台用 chaoxing/_vendor_linux。",
   "released": "2026-10-16"
 }
