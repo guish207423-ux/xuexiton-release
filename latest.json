@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.36",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.36.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.36.zip",
-  "file": "xuexiton-update-2026.10.36.zip",
-  "sha256": "f309ac802c59a08bad2b94a15f9e48ea62d91c565f9f79ce4f397496dc704942",
-  "notes": "命令行刷课（./onclick.sh run / check）修复：\n1) 引擎相关函数按 $HERE 定位包内 chaoxing/，但脚本从未定义 HERE —— 而脚本开着 set -u，一走到引擎判断就 HERE: unbound variable 整个命令退出，命令行刷课一直是坏的。\n2) 引擎就绪判断改为真探活（跑一次 main.py -h 验完整条 import 链）：此前只看文件存在，在 Linux 上必然误判为「原生就绪（无需 Docker）」，实际依赖缺失、一启动就 ModuleNotFoundError，还把 Docker 回退挡在门外。\n3) run() 原来把「需要 Docker」的检查放在最前面，导致注释里承诺的「原生优先、无需 Docker」在没装 Docker 的机器上根本走不到 —— 现在先判原生引擎，只有走 Docker 回退才要求装 Docker。\n4) 引擎依赖路径按平台选择：Windows 用 chaoxing/_vendor，其它平台用 chaoxing/_vendor_linux。",
+  "version": "2026.10.37",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.37.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.37.zip",
+  "file": "xuexiton-update-2026.10.37.zip",
+  "sha256": "ca3b1f35887d1da234b56abc54745c28ab6306e8b0467b210baca9b5abf3dae0",
+  "notes": "补齐「去 Docker 硬依赖」的最后一块：\n1) 打包补上 chaoxing/_vendor_linux。引擎的 6 个依赖全是纯 Python，但此前只随包发了 Windows 的 _vendor，Linux 下原生引擎必然 import 失败，所以「无需 Docker」一直只在概念上成立。U 盘装出来的新机现在原生即可用（实测 1.5s 拉完课程，走 Docker 3.8s）。该目录按体积不放进在线更新包，已装机器继续走 Docker 回退、功能不受影响。\n2) 文档修正：README-一键部署.md 说 Docker「仅命令行版 run 需要」且「镜像不会自带」——实际原生引擎优先，且镜像随包在 docker/chaoxing-local.tar.gz 并由首次 run 自动导入。",
   "released": "2026-10-16"
 }
