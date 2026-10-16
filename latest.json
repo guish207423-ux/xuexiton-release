@@ -1,9 +1,9 @@
 {
-  "version": "2026.10.26",
-  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.26.zip",
-  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.26.zip",
-  "file": "xuexiton-update-2026.10.26.zip",
-  "sha256": "abb1bdb58c4cf922859b2c43919fe1a2be946c57757ca6544f6d3fbb4ec425aa",
-  "notes": "修复「控制台更新页报未配置在线更新地址」。根因：更新源有三条读取路径，默认值只加在命令行侧（update.sh / 在线更新.ps1），控制台 panel.py 没配就报错，而安装器生成的 deploy.env 里又不写 UPDATE_FEED —— 于是 U 盘装出来的机器更新页一律不可用。本次三处默认对齐：panel.py 加内置 DEFAULT_UPDATE_FEED、deploy.env.example 的 UPDATE_FEED 由注释改为生效行、安装器（gen-env.ps1/安装.sh）生成 deploy.env 时显式写入。老机器把新版 deploy.env.example 覆盖过去即可恢复更新。",
-  "released": "2026-10-14"
+  "version": "2026.10.32",
+  "url": "https://cdn.jsdelivr.net/gh/guish207423-ux/xuexiton-release@main/xuexiton-update-2026.10.32.zip",
+  "url_raw": "https://raw.githubusercontent.com/guish207423-ux/xuexiton-release/main/xuexiton-update-2026.10.32.zip",
+  "file": "xuexiton-update-2026.10.32.zip",
+  "sha256": "b293f4a25c7dcde4b406baaf827135581275d6db782566a46d08c191a8d6b436",
+  "notes": "修复「一键拉取课程」在 Linux 上必然失败（提示 docker 未部署 / DOCKER 不可用）。根因是三个缺陷叠加：①panel.py 的 engine_ready() 只检查「引擎源码存在 + 有 python」（pycmd() 最后 fallback 到 sys.executable，恒为真），从不真跑一次引擎，于是长期谎报「引擎正常·原生」，把 Docker 回退彻底挡住；②引擎依赖只随包发了 Windows 轮子 chaoxing/_vendor，Linux 版 _vendor_linux 从未随包发，原生引擎在 Linux 上一 import 就 ModuleNotFoundError: openai，每次点按钮都是秒崩；③Docker 分支里 engine_status/engine_logs/engine_exit_code 三个函数误写成 return 自己()，一旦真的回退到 Docker 就无限递归，/api/state 线程直接爆掉、HTTP 挂起（表现为连接建立后无响应直到超时）。另修一处前端假警报：控制台首页仍读 store.state.docker，而 /api/state 早已把该字段改名为 engine，导致「DOCKER 不可用」红字永久常亮——用户机器的 Docker 其实完全正常。修复：engine_ready() 改为真探测（实跑 main.py -h，returncode==0 才算就绪，探测结果缓存），三处自递归改回 ps_names_status()/container_logs()/exit_code()，前端改读 engine 并显示「引擎 正常·原生 / 正常·docker / 未就绪」。配套：安装器新增 Docker 引擎自动安装（pacman/apt/dnf/zypper 四分支 + 无 systemd 时后台直起 dockerd 并轮询就绪），并修正 -y 全自动模式下会静默跳过 Docker 安装的守卫缺陷；补发此前漏发、panel.py 硬依赖的 _engine_run.py。",
+  "released": "2026-10-16"
 }
